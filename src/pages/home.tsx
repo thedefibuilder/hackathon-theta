@@ -1,8 +1,19 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+
+import {
+  createPublicClient,
+  createWalletClient,
+  custom,
+  EIP1193Provider,
+  http,
+  PublicClient,
+  WalletClient
+} from 'viem';
 
 import stepBackground from '@/assets/images/step.svg';
 import BorderedContainer from '@/components/bordered-container';
 import ChainSelectSection from '@/components/sections/chains';
+import CodeViewerSection from '@/components/sections/code-viewer/code-viewer-section';
 import PromptSection from '@/components/sections/prompt/prompt-section';
 import TemplatesSection from '@/components/sections/templates';
 import SuspenseFallback from '@/components/suspense-fallback';
@@ -11,10 +22,18 @@ import TCreationStep from '@/lib/creation-step';
 import useContractWorkflow from '@/lib/hooks/use-contract-workflow';
 import { templates, TTemplate } from '@/lib/template';
 
+declare global {
+  interface Window {
+    ethereum: EIP1193Provider;
+  }
+}
+
 export default function HomePage() {
   const [activeChain, setActiveChain] = useState(chains[0]);
   const [activeTemplate, setActiveTemplate] = useState(templates[0]);
   const [userPrompt, setUserPrompt] = useState('');
+  const [publicClient, setPublicClient] = useState<PublicClient | null>(null);
+  const [walletClient, setWalletClient] = useState<WalletClient | null>(null);
 
   const {
     isGenerating,
@@ -74,6 +93,23 @@ export default function HomePage() {
     }
   ];
 
+  useEffect(() => {
+    if (window.ethereum) {
+      const publicClient = createPublicClient({
+        chain: activeChain.network,
+        transport: http()
+      });
+
+      const walletClient = createWalletClient({
+        chain: activeChain.network,
+        transport: custom(window.ethereum)
+      });
+
+      setPublicClient(publicClient);
+      setWalletClient(walletClient);
+    }
+  }, [activeChain]);
+
   return (
     <div className='flex w-full max-w-[1140px] flex-col gap-y-5'>
       <BorderedContainer
@@ -116,6 +152,28 @@ export default function HomePage() {
           />
         </Suspense>
       </BorderedContainer>
+
+      {isAuditionSuccess && audit ? (
+        <BorderedContainer>
+          <Suspense fallback={<SuspenseFallback />}>
+            {/* <AuditSection activeChainName={activeChain.name} audit={audit} /> */}
+          </Suspense>
+        </BorderedContainer>
+      ) : null}
+
+      {publicClient && walletClient && contractCode ? (
+        <BorderedContainer>
+          <Suspense fallback={<SuspenseFallback />}>
+            <CodeViewerSection
+              publicClient={publicClient}
+              walletClient={walletClient}
+              activeChain={activeChain}
+              smartContractCode={contractCode}
+              contractArtifacts={contractArtifact}
+            />
+          </Suspense>
+        </BorderedContainer>
+      ) : null}
     </div>
   );
 }
