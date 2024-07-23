@@ -10,7 +10,8 @@ export default function Navbar() {
           <img src={defiBuilderLogo} alt="DeFi Builder's logo" className='h-6' />
         </Link>
 
-        {/* Connect Wallet button */}
+        {/* @ts-ignore-next-line */}
+        <w3m-button />
       </div>
     </nav>
   );
