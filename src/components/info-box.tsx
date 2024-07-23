@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { ComponentProps, PropsWithChildren } from 'react';
 
 import { InfoIcon, XCircle } from 'lucide-react';
