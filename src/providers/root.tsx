@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { PropsWithChildren } from 'react';
 
 import ReactQueryProvider from './react-query';

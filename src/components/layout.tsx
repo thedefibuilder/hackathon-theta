@@ -1,5 +1,3 @@
-import React from 'react';
-
 import layoutBG from '@/assets/images/layout-bg.png';
 
 import Footer from './footer';
