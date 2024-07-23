@@ -1,5 +1,5 @@
 import { documentationLink } from '@/lib/constants';
-import TTemplate from '@/lib/template';
+import { TTemplate } from '@/lib/template';
 import { cn } from '@/lib/utils';
 
 import ExternalAnchor from '../external-anchor';
@@ -29,10 +29,6 @@ export default function TemplatesSection({
             Choose modules to activate on your project
           </h4>
         </div>
-
-        <Button variant='secondary' className='w-full md:w-auto' asChild>
-          <ExternalAnchor href={documentationLink}>Explore Docs</ExternalAnchor>
-        </Button>
       </SectionHeader>
 
       <ul className='flex w-full flex-col gap-5 lg:flex-row'>
