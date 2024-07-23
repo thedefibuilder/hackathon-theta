@@ -49,12 +49,12 @@ export const thetaTestnet = defineChain({
 export const chains: TChain[] = [
   {
     name: 'Theta Mainnet',
-    logo: 'https://assets.coingecko.com/coins/images/2538/large/theta-token-logo.png',
+    logo: 'https://pbs.twimg.com/profile_images/932868157261225984/jxOQobOB_400x400.jpg',
     network: theta
   },
   {
     name: 'Theta Testnet',
-    logo: 'https://assets.coingecko.com/coins/images/2538/large/theta-token-logo.png',
+    logo: 'https://pbs.twimg.com/profile_images/932868157261225984/jxOQobOB_400x400.jpg',
     network: thetaTestnet
   }
 ];
