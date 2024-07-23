@@ -12,6 +12,7 @@ import {
 
 import stepBackground from '@/assets/images/step.svg';
 import BorderedContainer from '@/components/bordered-container';
+import AuditSection from '@/components/sections/audit/audit-section';
 import ChainSelectSection from '@/components/sections/chains';
 import CodeViewerSection from '@/components/sections/code-viewer/code-viewer-section';
 import PromptSection from '@/components/sections/prompt/prompt-section';
@@ -156,7 +157,7 @@ export default function HomePage() {
       {isAuditionSuccess && audit ? (
         <BorderedContainer>
           <Suspense fallback={<SuspenseFallback />}>
-            {/* <AuditSection activeChainName={activeChain.name} audit={audit} /> */}
+            <AuditSection activeChainName={activeChain.name} audit={audit} />
           </Suspense>
         </BorderedContainer>
       ) : null}
