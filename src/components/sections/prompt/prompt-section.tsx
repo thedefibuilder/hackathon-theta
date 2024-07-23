@@ -77,7 +77,7 @@ export default function PromptSection({
           />
         ) : (
           <Button>
-            {/* @ts-ignore/next-line */}
+            {/* @ts-expect-error/next-line */}
             <w3m-button />
           </Button>
         )}

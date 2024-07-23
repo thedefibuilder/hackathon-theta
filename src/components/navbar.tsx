@@ -10,7 +10,7 @@ export default function Navbar() {
           <img src={defiBuilderLogo} alt="DeFi Builder's logo" className='h-6' />
         </Link>
 
-        {/* @ts-ignore-next-line */}
+        {/* @ts-expect-error/next-line */}
         <w3m-button />
       </div>
     </nav>

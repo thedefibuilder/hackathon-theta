@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/no-array-reduce */
-
 import React, { Suspense } from 'react';
 
 import type { TVulnerability, TVulnerabilitySeverity } from '@defibuilder/sdk';

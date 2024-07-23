@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Check } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -24,7 +22,6 @@ export default function SuccessfulTransaction({
         <h3>{content}</h3>
       </div>
 
-      {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
       <Button autoFocus onClick={onCloseClick}>
         Ok, close
       </Button>

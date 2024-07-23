@@ -1,8 +1,6 @@
-import { documentationLink } from '@/lib/constants';
 import { TTemplate } from '@/lib/template';
 import { cn } from '@/lib/utils';
 
-import ExternalAnchor from '../external-anchor';
 import { Button } from '../ui/button';
 import SectionContainer from './container';
 import SectionHeader from './header';

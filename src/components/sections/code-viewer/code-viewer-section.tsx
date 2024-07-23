@@ -57,7 +57,6 @@ export default function CodeViewerSection({
     deployContractInitialState
   );
 
-  // eslint-disable-next-line sonarjs/cognitive-complexity
   useEffect(() => {
     if (!contractArtifacts) {
       return;
