@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useReducer, useState } from 'react';
+import { Suspense, useEffect, useReducer, useState } from 'react';
 
 import type { PublicClient, WalletClient } from 'viem';
 
