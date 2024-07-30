@@ -1,15 +1,15 @@
 import type { TContractType } from '@defibuilder/sdk';
 import type { LucideIcon } from 'lucide-react';
 
-import { BadgeCent, BookHeart, Brush, Coins, Store, Vault } from 'lucide-react';
+import { BadgeCent, BookHeart, Brush, Dices, HandCoins, Landmark } from 'lucide-react';
 
 import {
+  predefinedDAOPrompts,
   predefinedEditionPrompts,
-  predefinedExchangePrompts,
-  predefinedMarketplacePrompts,
+  predefinedMinigamePrompts,
   predefinedNftPrompts,
+  predefinedRevenueSharePrompts,
   predefinedTokenPrompts,
-  predefinedVaultPrompts,
   TPrompt
 } from './prompt';
 
@@ -40,21 +40,21 @@ export const templates: TTemplate[] = [
     description: 'Create a ERC1155 token contract'
   },
   {
-    name: 'Vault',
-    icon: Vault,
-    predefinedPrompts: predefinedVaultPrompts,
-    description: 'Create a vault contract'
+    name: 'Revenue Share',
+    icon: HandCoins,
+    predefinedPrompts: predefinedRevenueSharePrompts,
+    description: 'Create a Revenue Share contract'
   },
   {
-    name: 'Marketplace',
-    icon: Store,
-    predefinedPrompts: predefinedMarketplacePrompts,
-    description: 'Create a marketplace contract'
+    name: 'Minigame',
+    icon: Dices,
+    predefinedPrompts: predefinedMinigamePrompts,
+    description: 'Create a Minigame contract'
   },
   {
-    name: 'Exchange',
-    icon: Coins,
-    predefinedPrompts: predefinedExchangePrompts,
-    description: 'Create a DEX contract'
+    name: 'DAO',
+    icon: Landmark,
+    predefinedPrompts: predefinedDAOPrompts,
+    description: 'Create a DAO contract'
   }
 ];

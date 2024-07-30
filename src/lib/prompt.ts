@@ -149,11 +149,106 @@ const predefinedExchangePrompts: TPrompt[] = [
   }
 ];
 
+const predefinedRevenueSharePrompts: TPrompt[] = [
+  {
+    template: 'Revenue Share',
+    title: 'Simple token Split',
+    content: 'Create a smart contract to split ERC-20 token revenue equally between two parties.'
+  },
+  {
+    template: 'Revenue Share',
+    title: 'NFT Sale Revenue Share',
+    content:
+      'Generate a smart contract that gives 60% of NFT sale revenue to the creator and 40% to the platform'
+  },
+  {
+    template: 'Revenue Share',
+    title: 'DeFi Yield Splitter',
+    content:
+      'Generate a smart contract to split DeFi earnings equally between Investor A and Investor B. The contract should deposit earnings, automatically distribute 50% to each investor, allow withdrawals at any time, and log all transactions for transparency.'
+  },
+  {
+    template: 'Revenue Share',
+    title: 'Revenue Share with Referrals',
+    content:
+      'Create a smart contract for revenue sharing that allocates 10% of revenue to referrers based on the users they referred. The remaining 90% is split equally between Party A and Party B. If there are multiple referrers, their share is distributed proportionally.'
+  }
+];
+
+const predefinedMinigamePrompts: TPrompt[] = [
+  {
+    template: 'Minigame',
+    title: 'Tic Tac Toe Game',
+    content:
+      'Create a smart contract for a Tic Tac Toe game where players deposit an entry fee. The winner takes the entire prize pool.'
+  },
+  {
+    template: 'Minigame',
+    title: 'Dice Roll Game',
+    content:
+      'Generate a smart contract for a dice roll game that collects entry fees from players and distributes the total prize pool randomly to one winner.'
+  },
+  {
+    template: 'Minigame',
+    title: 'Lottery Draw',
+    content:
+      'Create a smart contract for a lottery draw. Players purchase tickets, and the contract randomly selects a winner to receive the prize pool.'
+  },
+  {
+    template: 'Minigame',
+    title: 'Quiz Competition',
+    content:
+      'Generate a smart contract for a quiz competition where participants pay an entry fee. The top 3 scorers receive 50%, 30%, and 20% of the prize pool respectively.'
+  },
+  {
+    template: 'Minigame',
+    title: 'Race Betting',
+    content:
+      'Create a smart contract for a virtual race betting game. Players bet on different racers, and the winners share the prize pool based on the odds.'
+  }
+];
+
+const predefinedDAOPrompts: TPrompt[] = [
+  {
+    template: 'DAO',
+    title: 'Basic Voting System',
+    content:
+      'Create a smart contract for a DAO with a basic voting system where members can propose and vote on initiatives. Each member has one vote.'
+  },
+  {
+    template: 'DAO',
+    title: 'Treasury Management',
+    content:
+      'Generate a smart contract for DAO treasury management. Members can vote on how to allocate funds from the treasury for various projects.'
+  },
+  {
+    template: 'DAO',
+    title: 'Membership Rewards',
+    content:
+      'Create a smart contract that rewards active DAO members with tokens based on their participation in votes and proposals.'
+  },
+  {
+    template: 'DAO',
+    title: 'Proposal Submission',
+    content:
+      'Generate a smart contract that allows DAO members to submit proposals for new projects. Proposals need a minimum number of votes to be considered.'
+  },
+  {
+    template: 'DAO',
+    title: 'Role-Based Voting',
+    content:
+      'Create a smart contract for a DAO with role-based voting. Different roles have different voting weights, and decisions require a majority based on these weights.'
+  }
+];
+
 export {
   predefinedTokenPrompts,
   predefinedNftPrompts,
   predefinedEditionPrompts,
   predefinedVaultPrompts,
   predefinedMarketplacePrompts,
-  predefinedExchangePrompts
+  predefinedExchangePrompts,
+  predefinedRevenueSharePrompts,
+  predefinedMinigamePrompts,
+  predefinedDAOPrompts
 };

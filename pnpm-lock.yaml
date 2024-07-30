@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@defibuilder/sdk':
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.0.5
+        version: 1.0.5
       '@radix-ui/react-dialog':
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -868,8 +868,8 @@ packages:
   '@coinbase/wallet-sdk@4.0.4':
     resolution: {integrity: sha512-74c040CRnGhfRjr3ArnkAgud86erIqdkPHNt5HR1k9u97uTIZCJww9eGYT67Qf7gHPpGS/xW8Be1D4dvRm63FA==}
 
-  '@defibuilder/sdk@1.0.1':
-    resolution: {integrity: sha512-XOCom4n5yJ5WxHOTpIUE7U2aosHsA2+YY8KzuXfDN6AR0DxGgQv2JJCOTbWpGzsCXswrZGo6YUb6gjQCmpUfMw==}
+  '@defibuilder/sdk@1.0.5':
+    resolution: {integrity: sha512-pb1LbAPFesDlXm/L0qhSLJl7/KqeYD6NPr9ooG/9/XV7U/OKdTbrmqOYb1cNRwp/g4Kq6WZr7TpxHOoLnOS95A==}
     bundledDependencies:
       - genezio-remote
 
@@ -6274,7 +6274,7 @@ snapshots:
       preact: 10.22.1
       sha.js: 2.4.11
 
-  '@defibuilder/sdk@1.0.1': {}
+  '@defibuilder/sdk@1.0.5': {}
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true

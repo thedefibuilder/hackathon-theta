@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import type { TDeployContractAction, TDeployContractState } from '@/lib/reducers/deploy-contract';
+import type { TConstructorArgument, TConstructorArgumentValue } from './code-viewer-section';
 
 import EReducerState from '@/lib/reducer-state';
 import { cn } from '@/lib/utils';
@@ -20,7 +21,6 @@ import {
 } from '../../ui/dialog';
 import { Input } from '../../ui/input';
 import { Label } from '../../ui/label';
-import { type TConstructorArgument, type TConstructorArgumentValue } from './code-viewer-section';
 
 type TDeploymentDialog = {
   constructorArguments: TConstructorArgument[];

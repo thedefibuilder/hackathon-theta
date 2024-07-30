@@ -21,8 +21,7 @@ import { Skeleton } from '../../ui/skeleton';
 import { Textarea } from '../../ui/textarea';
 import SectionContainer from '../container';
 import SectionHeader from '../header';
-
-const DeploymentDialog = React.lazy(() => import('./deployment-dialog'));
+import DeploymentDialog from './deployment-dialog';
 
 export type TConstructorArgument = {
   name: string;
